@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
-        Joker myJoker = new Joker();
-        String joke = myJoker.getJoke();
+//    public void tellJoke(View view) {
+//        Joker myJoker = new Joker();
+//        String joke = myJoker.getJoke();
 //        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
-
-        Intent intent = new Intent(this, JokeActivity.class);
-        intent.putExtra(JokeActivity.JOKE_KEY, joke);
-        startActivity(intent);
-    }
+//
+//        Intent intent = new Intent(this, JokeActivity.class);
+//        intent.putExtra(JokeActivity.JOKE_KEY, joke);
+//        startActivity(intent);
+//    }
 
 }
