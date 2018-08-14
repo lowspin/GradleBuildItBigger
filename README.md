@@ -1,4 +1,26 @@
-# Gradle for Android and Java Final Project
+*Created as part of Udacity's Android Developer NanoDegree course by Google*
+
+__________________
+
+#### Project Features
+
+- A Java library that provides jokes.
+- A Google Cloud Endpoints (GCE) project that serves those jokes. 
+- An Android Library containing an activity for displaying jokes. 
+- An Android app that fetches jokes from the GCE module and passes them to the Android Library for display.
+- A loading indicator that is shown while the joke is being retrieved and disappears when the joke is ready.
+
+In-progress:
+- Functional Tests to verify that the Async task successfully retrieves a non-empty string.
+- Paid and Free flavors with ads in Free flavor only, along with required gradle dependencies
+
+Optional:
+- An interstitial ad to the free version. Display the ad after the user hits the button, but before the joke is shown.
+- A custom gradle task that launches the GCE local development server, runs the functional tests and shuts the server down again
+
+__________________
+
+# Gradle for Android and Java Final Project Specification
 
 In this project, you will create an app with multiple flavors that uses
 multiple libraries and Google Cloud Endpoints. The finished app will consist
