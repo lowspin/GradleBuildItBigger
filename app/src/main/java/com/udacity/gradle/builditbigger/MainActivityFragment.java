@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -20,6 +21,7 @@ import com.teachableapps.gradlebuilditbigger.jokeshow.JokeActivity;
 public class MainActivityFragment extends Fragment {
 
     public String joke2display = null;
+    ProgressBar progressBar = null;
 
     public MainActivityFragment() {
     }
@@ -28,16 +30,19 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
+        progressBar = root.findViewById(R.id.progressbar_joke);
 
         // Set onClickListener for the button
         Button button = root.findViewById(R.id.btn_joke);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //progressBar.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.VISIBLE);
                 tellJoke();
             }
         });
+
+        progressBar.setVisibility(View.GONE);
 
         AdView mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to
@@ -52,9 +57,9 @@ public class MainActivityFragment extends Fragment {
 
     public void tellJoke() {
         // Step 2: local Android Library
-        displayJoke();
+//        displayJoke();
         // Step 3: Google Cloud Endpoints
-//        new AsyncJokeTask().execute(this);
+        new EndpointsAsyncTask().execute(this);
     }
 
     public void displayJoke() {
