@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v4.util.Pair;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -58,6 +59,8 @@ class EndpointsAsyncTask extends AsyncTask<MainActivityFragment, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         mFragment.joke2display = result;
+        mFragment.progressBar.setVisibility(View.GONE);
+
         mFragment.displayJoke();
     }
 }
