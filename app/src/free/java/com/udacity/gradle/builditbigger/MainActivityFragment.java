@@ -11,7 +11,7 @@ import android.widget.ProgressBar;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.teachableapps.gradlebuilditbigger.javajokes.Joker;
+//import com.teachableapps.gradlebuilditbigger.javajokes.Joker;
 import com.teachableapps.gradlebuilditbigger.jokeshow.JokeActivity;
 
 

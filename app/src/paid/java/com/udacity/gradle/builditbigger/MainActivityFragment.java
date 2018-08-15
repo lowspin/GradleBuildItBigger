@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
-import com.teachableapps.gradlebuilditbigger.javajokes.Joker;
+//import com.teachableapps.gradlebuilditbigger.javajokes.Joker;
 import com.teachableapps.gradlebuilditbigger.jokeshow.JokeActivity;
 import com.teachableapps.gradlebuilditbigger.jokeshow.JokeActivityFragment;
 
