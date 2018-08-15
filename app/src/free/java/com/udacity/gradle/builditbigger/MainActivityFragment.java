@@ -63,12 +63,11 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void displayJoke() {
-        Joker myJoker = new Joker();
         // Step 1: show joke locally
+//        Joker myJoker = new Joker();
 //        String joke2display = myJoker.getJoke();
 //        Toast.makeText(this, joke2display, Toast.LENGTH_SHORT).show();
-
-        joke2display = myJoker.getJoke();
+//        joke2display = myJoker.getJoke();
 
         Intent intent = new Intent(getActivity(), JokeActivity.class);
         intent.putExtra(JokeActivity.JOKE_KEY, joke2display);
