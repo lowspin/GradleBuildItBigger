@@ -19,6 +19,7 @@ import com.teachableapps.gradlebuilditbigger.jokeshow.JokeActivity;
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
+    private static final String TAG = MainActivityFragment.class.getSimpleName();
 
     public String joke2display = null;
     ProgressBar progressBar = null;
@@ -32,6 +33,7 @@ public class MainActivityFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
         progressBar = root.findViewById(R.id.progressbar_joke);
 
+        Log.d(TAG,"onCreateView");
         // Set onClickListener for the button
         Button button = root.findViewById(R.id.btn_joke);
         button.setOnClickListener(new View.OnClickListener() {
@@ -63,12 +65,11 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void displayJoke() {
-        Joker myJoker = new Joker();
         // Step 1: show joke locally
+//        Joker myJoker = new Joker();
 //        String joke2display = myJoker.getJoke();
 //        Toast.makeText(this, joke2display, Toast.LENGTH_SHORT).show();
-
-        joke2display = myJoker.getJoke();
+//        joke2display = myJoker.getJoke();
 
         Intent intent = new Intent(getActivity(), JokeActivity.class);
         intent.putExtra(JokeActivity.JOKE_KEY, joke2display);

@@ -45,11 +45,13 @@ class EndpointsAsyncTask extends AsyncTask<MainActivityFragment, Void, String> {
 
         // get the parameters
         mFragment = params[0];
-        mContext = mFragment.getActivity();
+//        mContext = mFragment.getActivity();
+//        Log.d(TAG,mFragment.joke2display);
 
         // fetch list of jokes from backend using API
         try {
-            return jokesApi.getJoke().execute().getData();
+            Log.d(TAG,"running asynctask +++ ");
+            return jokesApi.getJoke().execute().getData(); //jokesApi.getJoke().execute().getData();
         } catch (IOException e) {
             Log.e(TAG, e.getMessage());
             return e.getMessage();
@@ -58,6 +60,7 @@ class EndpointsAsyncTask extends AsyncTask<MainActivityFragment, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
+        Log.d(TAG,"setting joke2display: " + result);
         mFragment.joke2display = result;
         mFragment.progressBar.setVisibility(View.GONE);
 

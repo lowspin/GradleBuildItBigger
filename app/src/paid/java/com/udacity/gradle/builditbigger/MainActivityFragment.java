@@ -3,6 +3,7 @@ package com.udacity.gradle.builditbigger;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import android.widget.ProgressBar;
 
 import com.teachableapps.gradlebuilditbigger.javajokes.Joker;
 import com.teachableapps.gradlebuilditbigger.jokeshow.JokeActivity;
+
+import static android.content.ContentValues.TAG;
 
 
 /**
@@ -53,13 +56,12 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void displayJoke() {
-        Joker myJoker = new Joker();
         // Step 1: show joke locally
+//        Joker myJoker = new Joker();
 //        String joke2display = myJoker.getJoke();
 //        Toast.makeText(this, joke2display, Toast.LENGTH_SHORT).show();
-
-        joke2display = myJoker.getJoke();
-
+//        joke2display = myJoker.getJoke();
+        Log.d(TAG,joke2display);
         Intent intent = new Intent(getActivity(), JokeActivity.class);
         intent.putExtra(JokeActivity.JOKE_KEY, joke2display);
         startActivity(intent);
