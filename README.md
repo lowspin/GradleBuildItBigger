@@ -9,12 +9,10 @@ __________________
 - An Android Library containing an activity for displaying jokes. 
 - An Android app that fetches jokes from the GCE module and passes them to the Android Library for display.
 - A loading indicator that is shown while the joke is being retrieved and disappears when the joke is ready.
-
-In-progress:
 - Functional Tests to verify that the Async task successfully retrieves a non-empty string.
 - Paid and Free flavors with ads in Free flavor only, along with required gradle dependencies
 
-Optional:
+Future Work (Optional):
 - An interstitial ad to the free version. Display the ad after the user hits the button, but before the joke is shown.
 - A custom gradle task that launches the GCE local development server, runs the functional tests and shuts the server down again
 
