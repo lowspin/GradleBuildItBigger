@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">jokeshow</string>
-    <string name="missing_joke">Please provide a joke for me to tell!</string>
+    <string name="missing_joke">Sorry! I am not feeling very funny right now.</string>
     <string name="action_settings">Settings</string>
 </resources>

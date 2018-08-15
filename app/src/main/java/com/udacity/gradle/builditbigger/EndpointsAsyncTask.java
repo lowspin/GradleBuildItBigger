@@ -47,7 +47,9 @@ class EndpointsAsyncTask extends AsyncTask<MainActivityFragment, Void, String> {
             return jokesApi.getJoke().execute().getData();
         } catch (IOException e) {
             Log.e(TAG, e.getMessage());
-            return e.getMessage();
+            //return e.getMessage();
+            // instead of error message, Return an empty string or null if an exception occurs
+            return null;
         }
     }
 

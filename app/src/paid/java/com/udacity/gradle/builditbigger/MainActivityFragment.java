@@ -63,10 +63,6 @@ public class MainActivityFragment extends Fragment {
 //        String joke2display = myJoker.getJoke();
 //        Toast.makeText(this, joke2display, Toast.LENGTH_SHORT).show();
 //        joke2display = myJoker.getJoke();
-<<<<<<< HEAD
-=======
-
->>>>>>> 8616db82b82c259ab457ad425f88290f1141d14a
         Intent intent = new Intent(getActivity(), JokeActivity.class);
         intent.putExtra(JokeActivity.JOKE_KEY, joke2display);
         startActivity(intent);
