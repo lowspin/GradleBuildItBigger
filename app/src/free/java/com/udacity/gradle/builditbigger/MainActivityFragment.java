@@ -33,7 +33,6 @@ public class MainActivityFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
         progressBar = root.findViewById(R.id.progressbar_joke);
 
-        Log.d(TAG,"onCreateView");
         // Set onClickListener for the button
         Button button = root.findViewById(R.id.btn_joke);
         button.setOnClickListener(new View.OnClickListener() {

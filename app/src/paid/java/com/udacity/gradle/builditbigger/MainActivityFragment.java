@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 
 import com.teachableapps.gradlebuilditbigger.javajokes.Joker;
 import com.teachableapps.gradlebuilditbigger.jokeshow.JokeActivity;
+import com.teachableapps.gradlebuilditbigger.jokeshow.JokeActivityFragment;
 
 import static android.content.ContentValues.TAG;
 
@@ -20,6 +21,7 @@ import static android.content.ContentValues.TAG;
  * A placeholder fragment containing a simple view.
  */
 public class MainActivityFragment extends Fragment {
+    private static final String TAG = MainActivityFragment.class.getSimpleName();
 
     public String joke2display = null;
     ProgressBar progressBar = null;
@@ -61,7 +63,6 @@ public class MainActivityFragment extends Fragment {
 //        String joke2display = myJoker.getJoke();
 //        Toast.makeText(this, joke2display, Toast.LENGTH_SHORT).show();
 //        joke2display = myJoker.getJoke();
-        Log.d(TAG,joke2display);
         Intent intent = new Intent(getActivity(), JokeActivity.class);
         intent.putExtra(JokeActivity.JOKE_KEY, joke2display);
         startActivity(intent);
